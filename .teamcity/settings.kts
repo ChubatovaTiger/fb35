@@ -5,7 +5,7 @@ import jetbrains.buildServer.configs.kotlin.vcs.GitVcsRoot
 version = "2023.11"
 
 project {
-    vcsRoot(Repo3)
+    //vcsRoot(Repo3)
     buildType(Build1)
 }
 
@@ -14,7 +14,7 @@ object Build1 : BuildType({
 
     vcs {
         root(DslContext.settingsRoot)
-        root(Repo3, "+:. => repo3")
+        //root(Repo3, "+:. => repo3")
     }
 
     steps {
@@ -29,6 +29,7 @@ object Build1 : BuildType({
     }
 })
 
+/*
 object Repo3 : GitVcsRoot({
     name = "https://github.com/ChubatovaTiger/repo3"
     url = "https://github.com/ChubatovaTiger/repo3"
@@ -38,3 +39,4 @@ object Repo3 : GitVcsRoot({
         password = "credentialsJSON:a34cf740-b3bf-4a18-b387-5b54dc880bc0"
     }
 })
+*/
