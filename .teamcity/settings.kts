@@ -6,7 +6,6 @@ version = "2023.11"
 
 project {
     vcsRoot(Repo3)
-    vcsRoot(Repo3, "+:. => repo3")
     buildType(Build1)
 }
 
