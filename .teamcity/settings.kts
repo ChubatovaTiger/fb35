@@ -6,7 +6,7 @@ version = "2023.11"
 
 project {
     vcsRoot(Repo3)
-    root(Repo3, "+:. => repo3")
+    vcsRoot(Repo3, "+:. => repo3")
     buildType(Build1)
 }
 
@@ -15,6 +15,7 @@ object Build1 : BuildType({
 
     vcs {
         root(DslContext.settingsRoot)
+        root(Repo3, "+:. => repo3")
     }
 
     steps {
